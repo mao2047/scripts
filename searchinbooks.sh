@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-f=$(fzf); ext=${f:e}; \
+cd ~/Books; f=$(fzf); ext=${f:e}; \
 	case $ext in \
 		pdf) zathura $f & ;;\
 		epub) ebook-viewer $f & ;;\

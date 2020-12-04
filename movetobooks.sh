@@ -5,7 +5,6 @@
 # fzf, sed y mv
 # $tmp - guarda la ruta
 # $ext - guarda la extensión
-# case va a generar las opciones
 ##########################################################
 loop=true; while $loop; do
 file1=$(fzf); echo $file1; read "?Introduce nuevo nombre: " file2; tmp=${file1:r}; ext=${file1:e}; \
