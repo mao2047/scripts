@@ -1,0 +1,12 @@
+#! /bin/zsh
+a=$(echo -e "1r\n2r\n3r\n4r\n1nr\n2nr\n3nr\n4nr" | dmenu -i); \
+case $a in \
+    1r) brightnessctl s 500 && redshift -P -O 5000 ;; \
+    2r) brightnessctl s 100 && redshift -P -O 5500 ;; \
+    3r) brightnessctl s 50 && redshift -P -O 5500 ;; \
+    4r) brightnessctl s 5 && redshift -P -O 5500 ;; \
+    1nr) brightnessctl s 100 && redshift -P -x ;; \
+    2nr) brightnessctl s 50 && redshift -P -x ;; \
+    3nr) brightnessctl s 5 && redshift -P -x ;; \
+    4nr) brightnessctl s 1 && redshift -P -x ;; \
+esac
