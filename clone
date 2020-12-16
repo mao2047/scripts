@@ -1,0 +1,7 @@
+#! /bin/zsh
+
+a=$(echo -e "upload\ndownload" | dmenu -i); 
+case $a in \
+    download) rclone sync dropbox: ~/dp ;; \
+    upload) rclone sync ~/dp dropbox: ;; \
+esac

@@ -5,8 +5,8 @@ case $a in \
     2r) brightnessctl s 100 && redshift -P -O 5500 ;; \
     3r) brightnessctl s 50 && redshift -P -O 5500 ;; \
     4r) brightnessctl s 5 && redshift -P -O 5500 ;; \
-    1nr) brightnessctl s 100 && redshift -P -x ;; \
-    2nr) brightnessctl s 50 && redshift -P -x ;; \
-    3nr) brightnessctl s 5 && redshift -P -x ;; \
-    4nr) brightnessctl s 1 && redshift -P -x ;; \
+    1nr) brightnessctl s 300 && redshift -P -x ;; \
+    2nr) brightnessctl s 100 && redshift -P -x ;; \
+    3nr) brightnessctl s 50 && redshift -P -x ;; \
+    4nr) brightnessctl s 5 && redshift -P -x ;; \
 esac
