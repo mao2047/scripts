@@ -1,6 +1,5 @@
 #! /bin/zsh
 #compila el coumento, luego la bibliografia y de nuevo el documento tex
-#por mao2047
 read  "?generar proyecto: " project
 if [[ -a $HOME/dropbox/TeX/$project ]]; then	
 	cd $HOME/dropbox/TeX/$project &&
