@@ -1,0 +1,33 @@
+#! /bin/zsh
+# mueve multiples libros a la vez
+# by mao2047
+loop=true; while $loop; do
+fzf -m | while read -r line; do \
+    print "$line"; line2=${line:r} && ext=${line:e}; \
+    vared -p "introduce nombre: " -c new; \
+	print "Mover a: \n | f: filosofía | s: sociología | a: antropologia | t: tecnología | \ 
+ | c: ciencias  | i: psicología | l: literatura   | n: religión   |\ 
+ |e: pedagogía  | g: guías |*** cualquier otra tecla para salir ***"; \
+	vared -p "> " -c a; \
+	case $a in \
+        f) mv ./$line $HOME/Books/filosofia/$new.$ext ;; \
+		s) mv ./$line $HOME/Books/sociologia/$new.$ext ;; \
+		a) mv ./$line $HOME/Books/antropologia/$new.$ext ;; \
+		t) mv ./$line $HOME/Books/tecnologia/$new.$ext ;; \
+		c) mv ./$line $HOME/Books/ciencias/$new.$ext ;; \
+		g) mv ./$line $HOME/Books/guias/$new.$ext ;; \
+		i) mv ./$line $HOME/Books/psicologia/$new.$ext ;; \
+		l) mv ./$line $HOME/Books/literatura/$new.$ext ;; \
+		n) mv ./$line $HOME/Books/religion/$new.$ext ;; \
+		e) mv ./$line $HOME/Books/pedagogia/$new.$ext ;; \
+		*) echo "bye"  ;; 
+	esac
+    unset new;
+    unset a;
+done
+
+read -s -k "?x para salir: " n; case $n in \
+    x) loop=false ;; \
+    *) loop=true ;; \
+esac
+done

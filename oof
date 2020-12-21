@@ -1,6 +1,6 @@
 #! /bin/zsh
 a=$(echo -e "Shutdown\nReboot" | dmenu -i); 
 case $a in 
-    Shutdown) shutdown;; \
-    Reboot) reboot;; \
+    Shutdown) poweroff ;; \
+    Reboot) reboot ;; \
 esac

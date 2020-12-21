@@ -1,11 +1,5 @@
 #! /bin/zsh
-##########################################################
-#script que renombra un archivo y lo mueve a la biblioteca
-#por mao2047 
-# fzf, sed y mv
-# $tmp - guarda la ruta
-# $ext - guarda la extensión
-##########################################################
+
 loop=true; while $loop; do
 file1=$(fzf); echo $file1; read "?Introduce nuevo nombre: " file2; tmp=${file1:r}; ext=${file1:e}; \
 	print "Mover a: \n f: filosofía | s: sociología | a: antropologia | t: tecnología\n c: ciencias  | i: psicología | l: literatura   | n: religión\n e: pedagogía | g: guias | *** cualquier otra tecla para salir ***"; \
