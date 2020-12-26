@@ -1,0 +1,4 @@
+#! /bin/zsh
+#brillito de pantalla
+
+brightnessctl | grep "Current" | awk '{print substr($4, 2, length($4)-2)}'

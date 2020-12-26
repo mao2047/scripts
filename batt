@@ -1,0 +1,11 @@
+#! /bin/zsh
+#script para informacion de bateria
+
+if [[ $(acpi | grep arging | awk '{print substr($3, 1, length($3)-1)}') != "Charging" ]]
+then
+    a=$(acpi | grep arging | awk '{print substr($4, 1, length($4)-1)}'); echo " $a" 
+else
+    a=$(acpi | grep arging | awk '{print substr($4, 1, length($4)-1)}'); echo " $a" 
+fi
+
+

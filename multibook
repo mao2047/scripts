@@ -1,5 +1,5 @@
 #! /bin/zsh
-# mueve multiples libros a la vez
+# renombra multiples libros a la vez
 # by mao2047
 loop=true; while $loop; do
 fzf -m | while read -r line; do \

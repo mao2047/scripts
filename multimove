@@ -3,22 +3,22 @@
 # by mao2047
 loop=true; while $loop; do
 fzf -m | while read -r line; do \
-    print "$line"; line2=${line:r} && ext=${line:e}; \
+    print "$line"; line2=${line:t} && ext=${line:e}; \
 	print "Mover a: \n | f: filosofía | s: sociología | a: antropologia | t: tecnología | \ 
  | c: ciencias  | i: psicología | l: literatura   | n: religión   |\ 
  |e: pedagogía  | g: guías |*** cualquier otra tecla para salir ***"; \
 	vared -p "> " -c a; \
 	case $a in \
-        f) cp ./$line $HOME/Books/filosofia/$line2.$ext ;; \
-		s) cp ./$line $HOME/Books/sociologia/$line2.$ext ;; \
-		a) cp ./$line $HOME/Books/antropologia/$line2.$ext ;; \
-		t) cp ./$line $HOME/Books/tecnologia/$line2.$ext ;; \
-		c) cp ./$line $HOME/Books/ciencias/$line2.$ext ;; \
-		g) cp ./$line $HOME/Books/guias/$line2.$ext ;; \
-		i) cp ./$line $HOME/Books/psicologia/$line2.$ext ;; \
-		l) cp ./$line $HOME/Books/literatura/$line2.$ext ;; \
-		n) cp ./$line $HOME/Books/religion/$line2.$ext ;; \
-		e) cp ./$line $HOME/Books/pedagogia/$line2.$ext ;; \
+        f) mv ./$line $HOME/Books/filosofia/$line2 ;; \
+		s) mv ./$line $HOME/Books/sociologia/$line2 ;; \
+		a) mv ./$line $HOME/Books/antropologia/$line2 ;; \
+		t) mv ./$line $HOME/Books/tecnologia/$line2 ;; \
+		c) mv ./$line $HOME/Books/ciencias/$line2 ;; \
+		g) mv ./$line $HOME/Books/guias/$line2 ;; \
+		i) mv ./$line $HOME/Books/psicologia/$line2 ;; \
+		l) mv ./$line $HOME/Books/literatura/$line2 ;; \
+		n) mv ./$line $HOME/Books/religion/$line2 ;; \
+		e) mv ./$line $HOME/Books/pedagogia/$line2 ;; \
 		*) echo "bye"  ;; 
 	esac
     unset a;
