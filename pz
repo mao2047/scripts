@@ -3,4 +3,4 @@
 
 project=$(du -a ~/dp/TeX/* | awk '$2 ~ /\.tex$/ {print $2}' | fzf) \
 	; echo "$project" ; cd "$dirr" \
-	; pdflatex $project ; zathura $project ; fg
+	; pdflatex $project 
