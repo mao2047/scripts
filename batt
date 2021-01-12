@@ -2,11 +2,13 @@
 #script para informacion de bateria
 
 if [[ $(acpi | grep arging | awk '{print substr($3, 1, length($3)-1)}') != "Charging" ]]
-    if [[ $(acpi | grep arging | awk '{print substr($3, 1, length($3)-1)}') = "Full" ]]
-        then
-            a=$(acpi | awk '{print substr($3, 1, length($3)-1)}'); echo "$a" 
 then
-    a=$(acpi | grep arging | awk '{print substr($4, 1, length($4)-1)}'); echo " $a" 
+    if [[ $(acpi | awk '{print substr($3, 1, length($3)-1)}') = "Full" ]]
+    then
+        a=$(acpi | awk '{print substr($3, 1, length($3)-1)}'); echo " $a"
+    else
+        a=$(acpi | grep arging | awk '{print substr($4, 1, length($4)-1)}'); echo " $a"
+    fi
 else
-    a=$(acpi | grep arging | awk '{print substr($4, 1, length($4)-1)}'); echo " $a" 
+    a=$(acpi | grep arging | awk '{print substr($4, 1, length($4)-1)}'); echo " $a" 
 fi

@@ -1,5 +1,5 @@
 #! /bin/zsh
 while true; do
-    xsetroot -name "墳$(amixer | grep "Left: Play" | awk {'print $5'}) [$(brillo)] [$(batt)] $( date +"%D (%a) %R " )"
+    xsetroot -name "墳$(amixer | grep "Left: Play" | awk {'print $5'}) [$(brillo)] [$(batt)] $( date +"%d %b %Y [%a] %R " )"
     sleep 1m
 done &
