@@ -1,0 +1,5 @@
+#! /bin/zsh
+while true; do
+    xsetroot -name "$(amixer | grep "Left: Play" | awk {'print $5'}) $(setxkbmap -print -verbose 9 | grep layout | awk '{print $2}') | $( date +"%d %b %Y [%a] %R " )"
+    sleep 20s
+done &
