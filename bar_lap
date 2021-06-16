@@ -1,0 +1,5 @@
+#! /bin/zsh
+while true; do
+    xsetroot -name "| $(cat /sys/class/power_supply/BAT1/capacity)% | $(free -h | awk 'FNR == 2 {print $3}') | $(setxkbmap -print -verbose 9 | grep layout | awk '{print $2}') | $( date +"%d %b %Y [%a] %R " )"
+    sleep 20s
+done &
