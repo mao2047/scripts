@@ -1,0 +1,6 @@
+#! /bin/zsh
+a=$(echo -e "Mount\nUnmount" | dmenu -i); 
+case $a in 
+  Mount) b=$(lsblk | awk '/─/ {print $1}' | grep -o '....$' | grep -v "a\|b" | dmenu -i); udiskie-mount -q '/dev/'$b; echo "$b is mounted";; \
+  Unmount) b=$(lsblk | awk '/─/ {print $1}' | grep -o '....$' | grep -v "a\|b" | dmenu -i); umount '/dev/'$b; echo "$b is unmounted" ;; \
+esac
