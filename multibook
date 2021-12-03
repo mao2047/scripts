@@ -10,16 +10,16 @@ fzf -m | while read -r line; do \
  |e: pedagogía  | g: guías |*** cualquier otra tecla para salir ***"; \
 	vared -p "> " -c a; \
 	case $a in \
-        f) mv ./$line $HOME/Books/filosofia/$new.$ext ;; \
-		s) mv ./$line $HOME/Books/sociologia/$new.$ext ;; \
-		a) mv ./$line $HOME/Books/antropologia/$new.$ext ;; \
-		t) mv ./$line $HOME/Books/tecnologia/$new.$ext ;; \
-		c) mv ./$line $HOME/Books/ciencias/$new.$ext ;; \
-		g) mv ./$line $HOME/Books/guias/$new.$ext ;; \
-		i) mv ./$line $HOME/Books/psicologia/$new.$ext ;; \
-		l) mv ./$line $HOME/Books/literatura/$new.$ext ;; \
-		n) mv ./$line $HOME/Books/religion/$new.$ext ;; \
-		e) mv ./$line $HOME/Books/pedagogia/$new.$ext ;; \
+        f) mv ./$line $HOME/books/filosofia/$new.$ext ;; \
+		s) mv ./$line $HOME/books/sociologia/$new.$ext ;; \
+		a) mv ./$line $HOME/books/antropologia/$new.$ext ;; \
+		t) mv ./$line $HOME/books/tecnologia/$new.$ext ;; \
+		c) mv ./$line $HOME/books/ciencias/$new.$ext ;; \
+		g) mv ./$line $HOME/books/guias/$new.$ext ;; \
+		i) mv ./$line $HOME/books/psicologia/$new.$ext ;; \
+		l) mv ./$line $HOME/books/literatura/$new.$ext ;; \
+		n) mv ./$line $HOME/books/religion/$new.$ext ;; \
+		e) mv ./$line $HOME/books/pedagogia/$new.$ext ;; \
 		*) echo "bye"  ;; 
 	esac
     unset new;
