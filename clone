@@ -1,7 +1,15 @@
 #! /bin/zsh
 
-a=$(echo -e "upload\ndownload" | dmenu -i); 
+a=$(echo -e "Dropbox\nDrive" | dmenu -i);
 case $a in \
-    download) rclone sync dropbox: ~/dp ;; \
-    upload) rclone sync ~/dp dropbox: ;; \
+    Dropbox) b=$(echo -e "upload\ndownload" | dmenu -i); 
+        case $b in \
+        download) rclone sync dropbox: ~/dp ;; \
+        upload) rclone sync ~/dp dropbox: ;; \
+    esac;;
+        Drive) c=$(echo -e "upload\ndownload" | dmenu -i); 
+        case $c in \
+        download) rclone sync Gdrive: ~/gd ;; \
+        upload) rclone sync ~/gd Gdrive: ;; \
+    esac;;
 esac
