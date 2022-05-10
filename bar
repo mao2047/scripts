@@ -1,5 +1,5 @@
 #! /bin/zsh
 while true; do
-    xsetroot -name "$(amixer | grep "Left: Play" | awk {'print $5'}) $(setxkbmap -print -verbose 9 | grep layout | awk '{print $2}') | $(cat /sys/class/power_supply/BATX/capacity)% | $( date +"%d %b %Y [%a] %R " )"
+    xsetroot -name "$(amixer | grep "Left: Play" | awk {'print $5'}) $(setxkbmap -print -verbose 9 | grep layout | awk '{print $2}') | $(cat /sys/class/power_supply/BAT0/capacity)% | $( date +"%d %b %Y [%a] %R " )"
     sleep 40s
 done &
